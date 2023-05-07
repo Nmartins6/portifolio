@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,23 +10,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Portifolio</title>
 </head>
+
 <body>
+
+    <i class="bi bi-list menu-mobile"></i>
 
     <aside id="header">
         <section class="profile">
             <img src="../static/img/profile_picture.png" alt="Nicolas profile piture">
             <h1>Nicolas Martins</h1>
             <div class="social-icons text-center mt-4">
-                <a target="_blank" href="#">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/nicolasedm/">
                     <i class="bi bi-linkedin"></i>
                 </a>
-                <a target="_blank" href="#">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Nmartins6/portifolio">
                     <i class="bi bi-github"></i>
                 </a>
-                <a target="_blank" href="#">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/niicolasmartins/">
                     <i class="bi bi-instagram"></i>
                 </a>
-                <a target="_blank" href="#">
+                <a target="_blank" rel="noopener noreferrer" href="#contact">
                     <i class="bi bi-envelope"></i>
                 </a>
             </div>
@@ -34,24 +38,24 @@
         <nav id="navbar" class="nav-menu">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i>Home</a>
+                    <a class="nav-link active" aria-current="page" href="#home"><i class="bi bi-house" aria-hidden="true"></i>Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-person"></i>About</a>
-                  </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="bi bi-list-check"></i>Tech's</a>
+                    <a class="nav-link" href="#about"><i class="bi bi-person" aria-hidden="true"></i>About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="bi bi-file-earmark"></i>Resume</a>
+                    <a class="nav-link" href="#"><i class="bi bi-list-check" aria-hidden="true"></i>Tech's</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-collection"></i>Portifolio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-envelope"></i>Contact</a>
-                  </li>
-              </ul>
+                    <a class="nav-link" href="#"><i class="bi bi-file-earmark" aria-hidden="true"></i>Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-collection" aria-hidden="true"></i>Portifolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="bi bi-envelope" aria-hidden="true"></i>Contact</a>
+                </li>
+            </ul>
         </nav>
     </aside>
 
@@ -60,13 +64,70 @@
         <section id="home" class="row m-0 p-0">
             <div class="col-md-5 d-flex justify-content-center align-items-center flex-column">
                 <h2 class="text-white text-shadow">Nicolas Martins</h2>
-                <span id="subtitle" class="text-white text-shadow">Estudante de sistemas para internet</span>
+                <span id="subtitle" class="text-white text-shadow">IT Student</span>
             </div>
 
             <div class="col-md-7 d-flex justify-content-end align-items-end flex-column">
                 <div id="roll" class="d-flex align-items-center">
                     <i class="bi bi-arrow-down text-white pe-2 fs-2" aria-hidden="true"></i>
-                    <a href="#">Arraste pra mais</a>
+                    <a href="#about">Roll down</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mt-5" id="about">
+            <div class="row w-100">
+                <div class="col-md-12" data-anime="down">
+                    <h2 class="pt-3">About</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad harum, voluptate quod inventore
+                        quisquam, minus quam suscipit, sapiente placeat ipsum autem error! Unde eum, impedit placeat
+                        minima expedita odit dolorem!</p>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <img class="img-fluid shadow" src="../static/img/profile_picture.png" alt="Nicolas profile picture" data-anime="left">
+                </div>
+
+                <div class="col-md-8" data-anime="right">
+                    <h3>IT Student</h3>
+                    <p>Lorem ipsum, doFlor sit amet consectetur adipisicing elit. Sequi, est maxime! Natus nisi optio
+                        quis fuga perferendis dolor, debitis voluptatibus nulla cumque tempore vero consectetur, magnam
+                        harum doloribus dolore deserunt.</p>
+
+                    <div class="z-0 row mt-3 mb-3">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush fs-5">
+                                <li class="list-group-item">Name: <span class="fw-light">Nicolas Edison Martins</span>
+                                </li>
+                                <li class="list-group-item">Age: <span class="fw-light">26</span></li>
+                                <li class="list-group-item">Birth: <span class="fw-light">February 08, 1997</span></li>
+                                </li>
+                                <li class="list-group-item">Adress: <span class="fw-light">RS, Brazil</span></li>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush fs-5">
+                                <li class="list-group-item">Site: <a class="fw-light text-decoration-none link-dark"
+                                        href="https://github.com/Nmartins6/portifolio" target="_blank"
+                                        rel="noopener noreferrer">github.com/Nmartins6</a>
+                                </li>
+                                <li class="list-group-item">Work: <a class="fw-light text-decoration-none link-dark"
+                                        href="http://gerdau.com.br" target="_blank" rel="noopener noreferrer">Gerdau S.A
+                                    </a><span class="fw-light"> - RS, Brazil</span></li>
+                                <li class="list-group-item">Degree: <span class="fw-light">Internet Systems</span></li>
+                                <li class="list-group-item">Expected Graduation: <span class="fw-light">December
+                                        2025</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, porro natus necessitatibus
+                        dolor laudantium aspernatur expedita eos hic, est qui rem ut, ratione consectetur veniam velit
+                        nemo a? Porro, placeat?</p>
+
                 </div>
             </div>
         </section>
@@ -76,4 +137,5 @@
     <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../static/script.js"></script>
 </body>
+
 </html>

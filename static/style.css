@@ -13,12 +13,12 @@ html, body {
     top: 0;
     left: 0;
     bottom: 0;
-    background: black;
+    background: #000;
     overflow-y: auto;
     width: 300px;
     transition: all ease-in-out 0.5s;
     padding: 0 15px;
-    z-index: auto;
+    z-index: 9999;
 }
 
 #header .profile img {
@@ -112,7 +112,7 @@ section#home span#subtitle {
 }
 
 .text-shadow {
-   text-shadow: 2px 2px 10px #242424;
+   text-shadow: 2px 2px 5px #9b9b9b;
 }
 
 section#home div#roll {
@@ -123,3 +123,76 @@ section#home div#roll a {
     text-decoration: none;
     color: #fff;
 }
+
+i.menu-mobile {
+    position: fixed;
+    color: #fff;
+    background-color: #242424;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 99999;
+    width: 45px;
+    height: 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-nav-active {
+    overflow: hidden;
+}
+
+.menu-nav-active #header {
+    left: 0;
+}
+
+@media (max-width: 1024px) {
+    #header {
+        left: -300px;
+    }
+    i.menu-mobile {
+        display: flex;
+        z-index: 9999;
+    }
+    section#home h2 {
+       font-size: 3.5rem;
+    }
+    section#home span#subtitle {
+        margin-right: auto;
+        font-size: 1rem;
+    }
+    #main {
+        margin-left: 0px;
+    }
+
+    
+
+}
+
+
+
+/*Scrollbar*/
+
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #000; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #242424; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #242424; 
+  }
