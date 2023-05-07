@@ -13,7 +13,7 @@ menuMobile.addEventListener('click', () => {
 /*Close menu*/
 
 const navItem = document.querySelectorAll('.nav-item')
-
+console.log(navItem)
 navItem.forEach(item => {
     item.addEventListener('click', () => {
         if(body.classList.contains("menu-nav-active")) {
