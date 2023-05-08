@@ -173,6 +173,50 @@ i.menu-mobile {
     background-color: #f0e9e9b9;
 }
 
+.cv-title {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #050d18;
+}
+
+.cv-item {
+    padding: 0 0 20px 20px;
+    margin-top: 5px;
+    border-left: 2px solid #1f5297;
+    position: relative;
+    background: #faf9f9b9;
+}
+
+.cv .cv-item h4 {
+    line-height: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "poppins", sans-serif;
+    color: #050d18;
+    margin-bottom: 10px;
+}
+
+.cv .cv-item h5 {
+    background: #f0e9e9b9;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cv .cv-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -7px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #1f5297;
+    border-radius: 50%;
+    background: #fff;
+}
+
 
 /*Scrollbar*/
 
