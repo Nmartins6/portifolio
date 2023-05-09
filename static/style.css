@@ -217,6 +217,11 @@ i.menu-mobile {
     background: #fff;
 }
 
+.carousel-indicators {
+bottom: -50px;
+
+}
+
 
 /*Scrollbar*/
 
@@ -240,4 +245,10 @@ i.menu-mobile {
   ::-webkit-scrollbar-thumb:hover {
     background: #242424; 
   }
+
+.card-icon{
+    border: solid 2px #242424;
+    border-radius: 10px;
+    background-color: #a8a9b4;
+}
 
