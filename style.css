@@ -94,7 +94,7 @@
       font-weight: bold;
   }
 
-  .active-link i {
+  .active i {
       font-size: 1.5rem;
       color: #149ddd;
   }
@@ -197,7 +197,7 @@
   }
 
   .cv-item {
-      height: 40vh;
+      height: 50vh;
       line-height: 1.5rem;
       padding: 0 0 20px 20px;
       margin-top: 5px;
@@ -235,11 +235,15 @@
       background: #fff;
   }
 
-  .carousel-indicators {
-      bottom: -50px;
+  .carousel-caption h5,
+  .carousel-caption p {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+}
 
-  }
-
+  .carousel-container {
+    width: 100%;
+ }
 
   /*Scrollbar*/
 
