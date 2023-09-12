@@ -23,3 +23,34 @@ navItem.forEach(item => {
     })
 })
 
+/*Creating an active action*/
+
+document.addEventListener("DOMContentLoaded", function() {
+    var navLinks = document.querySelectorAll(".nav-link");
+
+    function setActiveLink() {
+        var scrollPosition = window.scrollY;
+        
+        navLinks.forEach(function(link) {
+            var targetId = link.getAttribute("href").substring(1);
+            var targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                var targetPosition = targetElement.getBoundingClientRect().top + scrollPosition;
+                
+                if (scrollPosition >= targetPosition && scrollPosition < targetPosition + targetElement.offsetHeight) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            }
+        });
+    }
+
+    window.addEventListener("scroll", setActiveLink);
+    window.addEventListener("resize", setActiveLink);
+
+
+    setActiveLink();
+});
+
