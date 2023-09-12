@@ -290,7 +290,7 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="./img/anthopometric_assessment.jpg" class="d-block" alt="...">
+                                <img src="./img/anthopometric_assessment.jpg" class="d-block" alt="img ">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Calculadora Antropométrica</h5>
                                     <p class="project-descprition">Uma calculdora que realiza a avaliação antropométrica
@@ -298,7 +298,7 @@
                                 </div>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
-                                <img src="./img/pomodoro-timer.png" class="d-block" alt="...">
+                                <img src="./img/pomodoro-timer.png" class="d-block" alt="img pomodoro timer">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Timer Pomodoro</h5>
                                     <p class="project-descprition">Projeto de um cronômetro que permite que o usuário
@@ -326,12 +326,12 @@
             <div class="container mb-5">
                 <h2 class='pt-3 pb-3'>Contact</h2>
 
-                <div class="row">
+                <div class="row contact-container">
 
-                    <div class="col-md-5">
+                    <div class="col-md-5 teste1">
                         <div class="card p-5 shadow border-0" data-anime="up">
-                            <div class="endereco">
-                                <h4><i class="bi bi-geo-alt"></i> Localization:</h4>
+                            <div class="adress">
+                                <h4><i class="bi bi-geo-alt"></i> Localização:</h4>
                                 <p>Arroio dos Ratos,RS </p>
                             </div>
 
@@ -340,14 +340,51 @@
                                 <p>nicolas.edm7@gmail.com</p>
                             </div>
 
-
                             <iframe class="w-100"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5813.114125262256!2d-51.61759703246294!3d-29.96510519445493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951bc143cb415573%3A0xa4efbdfc16cbe389!2sVila%20Acos%20Finos%20Piratini%2C%20Charqueadas%20-%20RS%2C%2096745-000!5e0!3m2!1spt-BR!2sbr!4v1683610083367!5m2!1spt-BR!2sbr"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190712.43810201884!2d-51.84584764869971!3d-30.19577726436035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951bb9b47aa65865%3A0xcf9cdc65e3eb76d5!2sArroio%20dos%20Ratos%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1694538880775!5m2!1spt-BR!2sbr"
                                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                         </div>
                     </div>
+                    <div class="col-md-7 mt-5 mt-md-0">
+                        <div class="card p-5 h-100 shadow border-0" data-anime="left">
+
+                            <form class="row g-3" action='/send' method="POST">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Nome/Empresa:</label>
+                                    <input type="text" class="form-control" id="name" name='name'
+                                        placeholder='Digite seu nome' required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email:</label>
+                                    <input type="email" class="form-control" id="email" name='email'
+                                        placeholder='Digite seu email' required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Mensagem:</label>
+                                    <textarea type="text" class="form-control" id="message" name='message' rows="16"
+                                        placeholder="Digite sua mensagem" required></textarea>
+                                </div>
+
+
+                                <div class="col-12 d-flex mt-4">
+                                    <button id='send-btn' type="submit" class="btn btn-outline-primary">Enviar
+                                        mensagem</button>
+
+                                    <button id='btn-enviar-loader' class="btn btn-primary d-none" type="button" disabled>
+                                        <span class="spinner-border spinner-border-sm" role="status"
+                                            aria-hidden="true"></span>
+                                        Enviando...
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
 
 
         </section>
