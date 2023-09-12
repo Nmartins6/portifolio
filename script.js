@@ -23,13 +23,12 @@ navItem.forEach(item => {
     })
 })
 
-/*Creating an active action*/
 
 document.addEventListener("DOMContentLoaded", function() {
     var navLinks = document.querySelectorAll(".nav-link");
 
     function setActiveLink() {
-        var scrollPosition = window.scrollY || window.pageYOffset;
+        var scrollPosition = window.scrollY;
 
         navLinks.forEach(function(link) {
             var targetId = link.getAttribute("href").substring(1);
