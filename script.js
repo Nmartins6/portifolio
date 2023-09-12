@@ -29,16 +29,20 @@ document.addEventListener("DOMContentLoaded", function() {
     var navLinks = document.querySelectorAll(".nav-link");
 
     function setActiveLink() {
-        var scrollPosition = window.scrollY;
-        
+        var scrollPosition = window.scrollY || window.pageYOffset;
+
         navLinks.forEach(function(link) {
             var targetId = link.getAttribute("href").substring(1);
             var targetElement = document.getElementById(targetId);
-            
+
             if (targetElement) {
                 var targetPosition = targetElement.getBoundingClientRect().top + scrollPosition;
-                
-                if (scrollPosition >= targetPosition && scrollPosition < targetPosition + targetElement.offsetHeight) {
+                var targetHeight = targetElement.offsetHeight;
+
+                if (
+                    scrollPosition >= targetPosition - window.innerHeight / 2 &&
+                    scrollPosition < targetPosition + targetHeight - window.innerHeight / 2
+                ) {
                     link.classList.add("active");
                 } else {
                     link.classList.remove("active");
@@ -49,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener("scroll", setActiveLink);
     window.addEventListener("resize", setActiveLink);
-
 
     setActiveLink();
 });
