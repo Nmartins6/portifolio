@@ -105,7 +105,9 @@ a {
 #main {
     margin-left: 300px;
 }
-
+section {
+    width: 100%;
+}
 section#home {
     background-image: url(./img/background.jpg);
     background-repeat: no-repeat;
@@ -265,8 +267,16 @@ i.menu-mobile {
 }
 
 .card-contact {
-    height: 100%;
+    height: auto;
     padding: 0 25px 0 25px;
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+.text-area {
+    max-height: 100%; 
+    min-height: 100%; 
+    overflow-y: auto; 
 }
 
 iframe {
