@@ -196,3 +196,8 @@ ul {
     color: var(--white);
     background: rgba(255, 255, 255, 0.1);
 }
+
+/* Main Content */
+#main {
+    margin-left: 300px;
+}
