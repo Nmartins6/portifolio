@@ -262,6 +262,7 @@ ul {
     border-color: var(--primary);
     transform: translateY(5px);
 }
+
 /* Section About Me */
 .about-grid {
     display: grid;
@@ -387,4 +388,60 @@ ul {
 .btn-download:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
+}
+
+/* Section Skills */
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.skill-category {
+    background: var(--white);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.skill-category h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-md);
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.skill-category i {
+    color: var(--primary);
+}
+
+.skill-item {
+    margin-bottom: var(--space-md);
+}
+
+.skill-item span {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-weight: 500;
+}
+
+.skill-level {
+    height: 8px;
+    background: #e9ecef;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-level::after {
+    content: attr(data-level);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--primary);
+    border-radius: var(--radius-lg);
 }
