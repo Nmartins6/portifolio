@@ -445,3 +445,64 @@ ul {
     background: var(--primary);
     border-radius: var(--radius-lg);
 }
+
+/* Section Journey */
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.resume-column {
+    background: var(--white);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.resume-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-lg);
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.resume-title i {
+    color: var(--primary);
+}
+
+.resume-item {
+    margin-bottom: var(--space-lg);
+    padding-left: var(--space-md);
+    border-left: 2px solid var(--primary);
+    position: relative;
+}
+
+.resume-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--primary);
+}
+
+.resume-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-xs);
+    color: var(--secondary);
+}
+
+.resume-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-xs);
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
