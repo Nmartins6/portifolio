@@ -704,3 +704,28 @@ ul {
 .footer p {
     margin-bottom: 0;
 }
+
+/* Menu Mobile */
+.menu-mobile {
+    position: fixed;
+    right: var(--space-md);
+    top: var(--space-md);
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 999;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.menu-mobile:hover {
+    background: var(--primary-dark);
+}
