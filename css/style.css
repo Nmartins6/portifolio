@@ -66,3 +66,133 @@ img {
 ul {
     list-style: none;
 }
+
+/* Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.section {
+    padding: var(--space-xl) 0;
+}
+
+.section-bg {
+    background-color: var(--light);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    position: relative;
+    color: var(--secondary);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary);
+}
+
+/* Header */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background: var(--secondary);
+    transition: all 0.5s ease;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.profile {
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    margin: 0 auto var(--space-md);
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.profile img:hover {
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+.profile h1 {
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: var(--space-sm);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Navbar */
+.nav-menu {
+    padding: var(--space-md);
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.nav-menu a {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
+}
+
+.nav-menu a i {
+    margin-right: var(--space-xs);
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+}
