@@ -144,33 +144,4 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll();
     
-    // skills bar
-    function animateSkillBars() {
-        const skillLevels = document.querySelectorAll('.skill-level');
-        
-        skillLevels.forEach(level => {
-            const width = level.getAttribute('data-level');
-            level.style.width = '0';
-            
-            setTimeout(() => {
-                level.style.width = width;
-            }, 100);
-        });
-    }
-    
-    // obs skills bar
-    const skillsSection = document.querySelector('#skills');
-    
-    if (skillsSection) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateSkillBars();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        observer.observe(skillsSection);
-    }
 });
