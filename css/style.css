@@ -729,3 +729,14 @@ ul {
 .menu-mobile:hover {
     background: var(--primary-dark);
 }
+
+/* Swiper Custom */
+.swiper-pagination-bullet-active {
+    background: var(--primary) !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--primary) !important;
+}
+
