@@ -23,39 +23,3 @@ navItem.forEach(item => {
     })
 })
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    var navLinks = document.querySelectorAll(".nav-link");
-
-    function setActiveLink() {
-        var scrollPosition = window.scrollY;
-
-        navLinks.forEach(function(link) {
-            var targetId = link.getAttribute("href").substring(1);
-            var targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                var targetPosition = targetElement.getBoundingClientRect().top + scrollPosition;
-                var targetHeight = targetElement.offsetHeight;
-
-                if (
-                    scrollPosition >= targetPosition - window.innerHeight / 2 &&
-                    scrollPosition < targetPosition + targetHeight - window.innerHeight / 2
-                ) {
-                    link.classList.add("active");
-                } else {
-                    link.classList.remove("active");
-                }
-            }
-        });
-    }
-
-    window.addEventListener("scroll", setActiveLink);
-    window.addEventListener("resize", setActiveLink);
-
-    setActiveLink();
-});
-
-/*carousel animation*/
-
-

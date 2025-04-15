@@ -1,397 +1,340 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicolas Martins | Desenvolvedor em FullStack</title>
     <meta name="description" content="Portfólio de Nicolas Martins - Estudante de TI e Desenvolvedor Front-end">
-    
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    
-    <!-- CSS  -->
+
+    <!-- CSS Personalizado -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-    <i class="bi bi-list menu-mobile"></i>
+    <!-- Mobile Menu -->
+    <button class="mobile-menu" aria-label="Menu mobile">
+        <i class="bi bi-list"></i>
+    </button>
 
+    <!-- Sidebar -->
     <aside id="header">
         <section class="profile">
-            <img src="./img/profile_picture.png" alt="Nicolas profile piture">
+            <img src="./img/profile-picture.jpg" alt="Foto de Nicolas Martins">
             <h1>Nicolas Martins</h1>
-            <div class="social-icons text-center mt-4">
-                <a target="_blank" rel="noopener noreferrer" href="www.google.com.br">
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
                     <i class="bi bi-linkedin"></i>
                 </a>
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Nmartins6/portifolio">
+                <a href="https://github.com/Nmartins6" target="_blank" aria-label="GitHub">
                     <i class="bi bi-github"></i>
                 </a>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/niicolasmartins/">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a target="_blank" rel="noopener noreferrer" href="#contact">
+                <a href="mailto:nicolas.edm7@gmail.com" aria-label="Email">
                     <i class="bi bi-envelope"></i>
                 </a>
             </div>
         </section>
 
-        <nav id="navbar" class="nav-menu">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active active-link home" aria-current="page" href="#home"><i class="bi bi-house"
-                            aria-hidden="true"></i>Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link about" href="#about"><i class="bi bi-person" aria-hidden="true"></i>Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link skills" href="#skills"><i class="bi bi-list-check"
-                            aria-hidden="true"></i>Tecnologias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#resume"><i class="bi bi-file-earmark"
-                            aria-hidden="true"></i>Currículo</a>
-                </li>
-                <li class="nav-item portifolio">
-                    <a class="nav-link" href="#portifolio"><i class="bi bi-collection"
-                            aria-hidden="true"></i>Portifólio</a>
-                </li>
-                <li class="nav-item contact">
-                    <a class="nav-link" href="#contact"><i class="bi bi-envelope" aria-hidden="true"></i>Contato</a>
-                </li>
+        <nav id="navbar">
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active"><i class="bi bi-house"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="bi bi-person"></i> Sobre</a></li>
+                <li><a href="#skills" class="nav-link"><i class="bi bi-code-slash"></i> Habilidades</a></li>
+                <li><a href="#resume" class="nav-link"><i class="bi bi-file-earmark-text"></i> Trajetória</a></li>
+                <li><a href="#portfolio" class="nav-link"><i class="bi bi-collection"></i> Projetos</a></li>
+                <li><a href="#contact" class="nav-link"><i class="bi bi-chat-left-text"></i> Contato</a></li>
             </ul>
         </nav>
     </aside>
 
+    <!-- Conteúdo Principal -->
     <main id="main">
-
-        <section id="home" class="row m-0 p-0">
-            <div class="col-md-5 d-flex justify-content-center align-items-center flex-column">
-                <h2 class="text-white text-shadow">Nicolas Martins</h2>
-                <span id="subtitle" class="text-white text-shadow">Estudante de TI</span>
-            </div>
-
-            <div class="col-md-7 d-flex justify-content-end align-items-end flex-column">
-                <div id="roll" class="d-flex align-items-center">
-                    <i class="bi bi-arrow-down text-white pe-2 fs-2" aria-hidden="true"></i>
-                    <a href="#about">Ver mais</a>
-                </div>
+        <!-- Seção Home -->
+        <section id="home" class="section-home">
+            <div class="home-content">
+                <h1>Nicolas Martins</h1>
+                <p>Estudante de TI & Desenvolvedor Front-end</p>
+                <a href="#about" class="btn-scroll">
+                    <i class="bi bi-arrow-down"></i> Conheça meu trabalho
+                </a>
             </div>
         </section>
 
-        <section class="container mt-5" id="about">
-            <div class="row w-100">
-                <div class="col-md-12" data-anime="down">
-                    <h2 class="pt-3">Sobre mim</h2>
-                    <p>Meu nome é Nicolas, e estou em busca da minha primeira oportunidade como desenvolvedor.
-                    </p>
-                    <p>
-                        Sou uma pessoa altamente motivada, que trabalha bem em equipe e gosta de aprender. Isso me torna
-                        um excelente candidato,
-                        especialmente para cargos de nível iniciante, onde poderei aprender com meus colegas sobre as
-                        tecnologias e processos da
-                        empresa. Assim, em um futuro próximo, me tornarei um excelente contribuidor para o time.
-                    </p>
-                    <p>
-                        Embora minha experiência atual seja principalmente em desenvolvimento front-end e Java, estou
-                        aberto a aprender outras linguagens no trabalho, se isso for uma possibilidade.
-                    </p>
-                    <p>
-                        Estou buscando uma transição de carreira para me tornar um desenvolvedor. Em minhas experiências
-                        anteriores, aprendi
-                        como gerenciar recursos e resolver problemas complexos, habilidades que acredito serem
-                        importantes também no campo do
-                        desenvolvimento. Se você está procurando um profissional dedicado, motivado e comprometido,
-                        ficarei feliz em discutir
-                        como posso contribuir para sua equipe.
-                    </p>
-                </div>
-            </div>
+        <!-- Seção Sobre Mim -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">Sobre Mim</h2>
 
-            <div class="row mt-4">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <p class="intro">Me chamo Nicolas e estou em transição de carreira para a área de tecnologia,
+                            com foco em desenvolvimento web.</p>
 
-
-                <div class="col-md-8" data-anime="right">
-                    <h3>Estudante de TI</h3>
-                    <p>Atualmente, estou estudando
-                        Sistemas para Internet no IFSUL, onde estou adquirindo experiência prática no campo do
-                        desenvolvimento web e de software, utilizando tecnologias como Java, C, HTML, CSS, PHP e
-                        JavaScript.</p>
-
-                    <div class="z-0 row mt-3 mb-3">
-                        <div class="col-md-6">
-                            <ul class="list-group list-group-flush fs-5">
-                                <li class="list-group-item">Nome: <span class="fw-light">Nicolas Edison Martins</span>
-                                </li>
-                                <li class="list-group-item">Idade: <span class="fw-light">26</span></li>
-                                <li class="list-group-item">Aniversário: <span class="fw-light"> 08/02/1997</span></li>
-                                </li>
-                                <li class="list-group-item">Endereço: <span class="fw-light">RS, Brazil</span></li>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="list-group list-group-flush fs-5">
-                                <li class="list-group-item">Site: <a class="fw-light text-decoration-none link-dark"
-                                        href="https://github.com/Nmartins6/portifolio" target="_blank"
-                                        rel="noopener noreferrer">github.com/Nmartins6</a>
-                                </li>
-                                <li class="list-group-item">Trabalho Atual: <a
-                                        class="fw-light text-decoration-none link-dark" href="http://gerdau.com.br"
-                                        target="_blank" rel="noopener noreferrer">Gerdau S.A
-                                    </a><span class="fw-light"> - RS, Brazil</span></li>
-                                <li class="list-group-item">Curso: <span class="fw-light"> Tecnologia em Sistemas para
-                                        Internet</span></li>
-                                <li class="list-group-item">Previsão de formatura: <span class="fw-light">Dezembro de
-                                        2025</span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="mt-5 section-bg" id="skills">
-
-            <div class="container pb-5">
-                <h2 class="pt-5">Tecnologias</h2>
-                <p>Essas são algumas das tecnologias nas quais venho estudando e criando alguns projetos pessoais para
-                    aprimorar meus conhecimentos e habilidades.</p>
-
-                <hr class="w-75 me-auto ms-auto">
-
-                <ul>
-                    <li><strong>HTML:</strong> A linguagem de marcação fundamental para a criação de páginas web.</li>
-                    <li><strong>CSS:</strong> Utilizado para estilizar e dar aparência às páginas web.</li>
-                    <li><strong>JavaScript:</strong> Uma linguagem de programação essencial para tornar as páginas web
-                        interativas.</li>
-                    <li><strong>Java:</strong> Uma linguagem de programação versátil usada em aplicativos móveis, web e
-                        muito mais.</li>
-                    <li><strong>C:</strong> Uma linguagem de programação de baixo nível e de extrema importância para o
-                        aprendizado de conceitos cruciais de programação. Usada para desenvolvimento de
-                        sistemas e aplicações de alto desempenho.</li>
-                    <li><strong>PHP:</strong> Uma linguagem de programação amplamente usada para desenvolvimento web
-                        beckend</li>
-                    <li><strong>Bootstrap:</strong> Um framework de design front-end que acelera o desenvolvimento de
-                        interfaces web.</li>
-                    <li><strong>Git:</strong> Um sistema de controle de versão que facilita o rastreamento e
-                        gerenciamento de código fonte.</li>
-                    <li><strong>GitHub:</strong> Uma plataforma popular para hospedar e colaborar em projetos de
-                        desenvolvimento de software.</li>
-                    <li><strong>Linux:</strong> Um sistema operacional de código aberto amplamente utilizado em
-                        servidores e desenvolvimento de software.</li>
-                </ul>
-
-            </div>
-        </section>
-
-        <section id="resume" class="mt-5 cv">
-
-            <div class="container" pb-5>
-                <h2 class="pt-3 pb-4">Currículo</h2>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3 class="cv-title">Educação</h3>
-
-                        <div class="cv-item">
-                            <h4 class="course-name">Tecnologia em Sistemas para Internet</h4>
-                            <h5>2022 - Presente</h5>
-                            <p><em>IFSUL - Charqueadas</em></p>
-                            <ul>
-                                <li>Uma formação tecnológica que o habilita a
-                                    buscar soluções inovadoras e adequadas à realidade do mercado, utilizando a
-                                    tecnologia
-                                    de desenvolvimento e análise de sistemas.</li>
-                            </ul>
-                        </div>
-
-                        <div class="cv-item">
-                            <h4 class="course-name">Bootcamp de desenvolvimento Java</h4>
-                            <h5>2023</h5>
-                            <p><em>DIO/Banco-PAN - 114h</em></p>
-                            <ul>
-                                <li>Tecnologias: Java, Spring Boot, MongoDB, DynamoDB.</li>
-                            </ul>
-                        </div>
-
-                        <div class="cv-item">
-                            <h4 class="course-name">Desenvolvimento web Full Stack</h4>
-                            <h5>2022</h5>
-                            <p><em>ProgramadorBR - 50h</em></p>
-                            <ul>
-                                <li>HTML, CSS, JavaScript, Bootstrap, jQuery, React, Firebase, NodeJS, MongoDB</li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6">
-                        <h3 class="cv-title">Experiência Profissional</h3>
-
-                        <div class="cv-item">
-                            <h4 class="company-name">Gerdau S.A.</h4>
-                            <h5>2022 - Presente</h5>
-                            <p><em>Operador Mantenedor de Utilidades</em></p>
-                            <ul>
-                                <li>Manutenção preventiva, preditiva e corretiva de equipamentos e sistemas utilizados
-                                    na
-                                    geração e distribuição de
-                                    energia, água, ar comprimido, vapor, tratamento de resíduos, gestão de insumos e
-                                    recursos, entre outros.</li>
-                            </ul>
-                        </div>
-
-                        <div class="cv-item">
-                            <h4 class="company-name">Gerdau S.A.</h4>
-                            <h5>2021 - 2022</h5>
-                            <p><em>Operador de Laminação</em></p>
-                            <p>Operação e manutenção de diversos equipamentos e máquinas de laminação, ajuste de
-                                parâmetros de produção,
-                                realização de testes de qualidade e efetividade do processo produtivo. Também pude
-                                contribuir para o aumento da
-                                produtividade e qualidade do produto final, por meio da identificação e resolução de
-                                problemas e implementação
-                                de ideias.</p>
-                        </div>
-
-                        <div class="cv-item">
-                            <h4 class="company-name">Oficina Ramazzini</h4>
-                            <h5>2014 - 2021</h5>
-                            <p><em>Mecanico Automotivo</em></p>
-                            <ul>
-                                <li> Responsável por realizar a manutenção e reparos em veículos automotores,
-                                    diagnóstico de problemas mecânicos,
-                                    elétricos e eletrônicos.</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="portifolio" class="section-bg mt-5">
-            <div class="container pb-5 pt-5">
-
-                <h2 class="pb-4">Portifólio</h2>
-
-                <div class="carousel-container">
-                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="./img/anthopometric_assessment.jpg" class="d-block" alt="img ">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Calculadora Antropométrica</h5>
-                                    <p class="project-descprition">Uma calculdora que realiza a avaliação antropométrica
-                                        de um paciente.</p>
-                                </div>
+                        <div class="about-highlights">
+                            <div class="highlight-card">
+                                <i class="bi bi-journal-code"></i>
+                                <h3>Formação Acadêmica</h3>
+                                <p>Tecnologia em Sistemas para Internet - IFSUL (2022-2025)</p>
                             </div>
-                            <div class="carousel-item" data-bs-interval="2000">
-                                <img src="./img/pomodoro-timer.png" class="d-block" alt="img pomodoro timer">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>Timer Pomodoro</h5>
-                                    <p class="project-descprition">Projeto de um cronômetro que permite que o usuário
-                                        aplique a tecnica Pomodoro para otimização do seu tempo.</p>
+
+                            <div class="highlight-card">
+                                <i class="bi bi-lightbulb"></i>
+                                <h3>Minha Abordagem</h3>
+                                <p>Combino conhecimentos técnicos com habilidades de resolução de problemas</p>
+                            </div>
+                        </div>
+
+                        <p>Atualmente trabalhando na Gerdau S.A., busco minha primeira oportunidade como desenvolvedor
+                            para aplicar meus conhecimentos em HTML, CSS, JavaScript e Java.</p>
+                    </div>
+
+                    <div class="about-info">
+                        <div class="info-card">
+                            <h3>Informações</h3>
+                            <ul>
+                                <li>
+                                    <i class="bi bi-person"></i>
+                                    <span>Nicolas Martins</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-calendar"></i>
+                                    <span id="age">26 anos</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-envelope"></i>
+                                    <a href="mailto:nicolas.edm7@gmail.com">nicolas.edm7@gmail.com</a>
+                                </li>
+                                <li>
+                                    <i class="bi bi-github"></i>
+                                    <a href="https://github.com/Nmartins6" target="_blank">github.com/Nmartins6</a>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="btn-download">
+                                <i class="bi bi-download"></i> Baixar CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Habilidades -->
+        <section id="skills" class="section section-bg">
+            <div class="container">
+                <h2 class="section-title">Habilidades Técnicas</h2>
+
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3><i class="bi bi-code"></i> Front-end</h3>
+                        <div class="skill-item">
+                            <span>HTML5</span>
+                            <div class="skill-level" data-level="90%"></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>CSS3</span>
+                            <div class="skill-level" data-level="85%"></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="skill-level" data-level="75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="bi bi-server"></i> Back-end</h3>
+                        <div class="skill-item">
+                            <span>Java</span>
+                            <div class="skill-level" data-level="70%"></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>PHP</span>
+                            <div class="skill-level" data-level="60%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="bi bi-tools"></i> Ferramentas</h3>
+                        <div class="skill-item">
+                            <span>Git</span>
+                            <div class="skill-level" data-level="80%"></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Bootstrap</span>
+                            <div class="skill-level" data-level="85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Trajetória -->
+        <section id="resume" class="section">
+            <div class="container">
+                <h2 class="section-title">Minha Trajetória</h2>
+
+                <div class="resume-grid">
+                    <div class="resume-column">
+                        <h3 class="resume-title"><i class="bi bi-book"></i> Educação</h3>
+
+                        <div class="resume-item">
+                            <h4>Tecnologia em Sistemas para Internet</h4>
+                            <div class="resume-meta">
+                                <span>IFSUL</span>
+                                <span>2022 - Presente</span>
+                            </div>
+                            <p>Formação focada em desenvolvimento web e sistemas para internet.</p>
+                        </div>
+
+                        <div class="resume-item">
+                            <h4>Bootcamp Desenvolvimento Java</h4>
+                            <div class="resume-meta">
+                                <span>DIO/Banco PAN</span>
+                                <span>2023 (114h)</span>
+                            </div>
+                            <p>Java, Spring Boot, MongoDB, DynamoDB</p>
+                        </div>
+                    </div>
+
+                    <div class="resume-column">
+                        <h3 class="resume-title"><i class="bi bi-briefcase"></i> Experiência</h3>
+
+                        <div class="resume-item">
+                            <h4>Operador Mantenedor de Utilidades</h4>
+                            <div class="resume-meta">
+                                <span>Gerdau S.A.</span>
+                                <span>2022 - Presente</span>
+                            </div>
+                            <p>Manutenção de equipamentos e sistemas industriais.</p>
+                        </div>
+
+                        <div class="resume-item">
+                            <h4>Mecânico Automotivo</h4>
+                            <div class="resume-meta">
+                                <span>Oficina Ramazzini</span>
+                                <span>2014 - 2021</span>
+                            </div>
+                            <p>Diagnóstico e reparo de veículos automotores.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Portfólio -->
+        <section id="portfolio" class="section section-bg">
+            <div class="container">
+                <h2 class="section-title">Meus Projetos</h2>
+
+                <div class="swiper portfolio-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Projeto 1 -->
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <img src="./img/anthopometric_assessment.jpg" alt="Calculadora Antropométrica">
+                                <div class="project-content">
+                                    <h3>Calculadora Antropométrica</h3>
+                                    <p>Ferramenta para avaliação física de pacientes.</p>
+                                    <div class="project-techs">
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="#" class="btn-view">Ver Projeto</a>
+                                        <a href="#" class="btn-code">Código</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
 
+                        <!-- Projeto 2 -->
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <img src="./img/pomodoro-timer.png" alt="Timer Pomodoro">
+                                <div class="project-content">
+                                    <h3>Timer Pomodoro</h3>
+                                    <p>Aplicativo para gerenciamento de tempo.</p>
+                                    <div class="project-techs">
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="#" class="btn-view">Ver Projeto</a>
+                                        <a href="#" class="btn-code">Código</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controles do Slider -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
         </section>
 
-        <section class="pt-5 pb-5" id="contact">
+        <!-- Seção Contato -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Vamos Conversar</h2>
 
-            <div class="container mb-5">
-                <h2 class='pt-3 pb-3'>Contact</h2>
-
-                <div class="row contact-container">
-
-                    <div class="col-md-5 card-contact shadow mt-5">
-                        <div class="adress mt-5">
-                            <h4><i class="bi bi-geo-alt"></i> Localização:</h4>
-                            <p>Arroio dos Ratos,RS </p>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="bi bi-envelope"></i>
+                            <h3>Email</h3>
+                            <a href="mailto:nicolas.edm7@gmail.com">nicolas.edm7@gmail.com</a>
                         </div>
-                        <div class="email mt-5">
-                            <h4><i class="bi bi-envelope"></i> Email:</h4>
-                            <p>nicolas.edm7@gmail.com</p>
+
+                        <div class="info-item">
+                            <i class="bi bi-linkedin"></i>
+                            <h3>LinkedIn</h3>
+                            <a href="#" target="_blank">linkedin.com/in/seuperfil</a>
                         </div>
-                        <iframe class="w-100 mt-5"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190712.43810201884!2d-51.84584764869971!3d-30.19577726436035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951bb9b47aa65865%3A0xcf9cdc65e3eb76d5!2sArroio%20dos%20Ratos%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1694538880775!5m2!1spt-BR!2sbr"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="col-md-6 card-contact shadow mt-5">
-                        <div class="text-area">
-                        <h4 class="pt-5 pb-5">Obrigado pela Visita! :)</h4>
-                        <p>
 
-                            Atualmente, estou focado na busca contínua de novos conhecimentos na área de programação.
-                            E estou sempre aberto para uma boa conversa, especialmente quando se trata de tecnologia,
-                            carros e games. Esses são temas que me apaixonam e nos quais adoro compartilhar ideias
-                            e experiências.
-                        </p>
-                            Se você estiver interessado em discutir qualquer um desses tópicos ou simplesmente
-                            deseja bater um papo, não hesite em entrar em contato. Estou ansioso para interagir com você
-                            e conversar sobre esses assuntos, ou qualquer outro.
-                        <p>
-                            Mais uma vez, obrigado por visitar minha página. Espero que você tenha tido uma experiência
-                            agradável aqui!
-                        </p>
-
-                        <p>
-                            Se quiser conferir ou compartilhar meu currículo completo, <a
-                                href="https://drive.google.com/file/d/1-wbPYwHF74e_aYlPOFuBw3CrtU1kjqtd/view?usp=sharing"
-                                target="_blank">aqui</a> está o link para o arquivo no google drive!
-                        </p>
-                        <p>
-                            E <a
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSfqC2GmJpQhmM_AdgEKpVY-lmJkQXWww9s9axQQTJdcr5BVkQ/viewform?usp=sf_link" target="_blank">aqui</a>
-                            um formulario para sugestões, duvidas ou comentários que deseje fazer sobre a página, caso
-                            nao queira faze-lo no <a href="https://github.com/Nmartins6" target="_blank">GitHub</a>, ou
-                            qualquer outro assunto.
-                        </p>
-
-                        <p>
-                            Atenciosamente,</p>
-                        <h2>Nicolas Martins.</h2>
+                        <div class="info-item">
+                            <i class="bi bi-github"></i>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/Nmartins6" target="_blank">github.com/Nmartins6</a>
+                        </div>
                     </div>
 
-                    </div>
+                    <div class="contact-message">
+                        <h3>Disponível para oportunidades!</h3>
+                        <p>Estou buscando minha primeira experiência como desenvolvedor. Se você tem uma oportunidade ou
+                            quer discutir algum projeto, ficarei feliz em conversar.</p>
 
+                        <div class="contact-cta">
+                            <a href="#" class="btn-primary">Enviar Mensagem</a>
+                            <a href="#" class="btn-secondary">Baixar Currículo</a>
+                        </div>
+                    </div>
                 </div>
+            </div>
         </section>
-
     </main>
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Nicolas Martins. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
     <script src="./js/main.js"></script>
 </body>
 
