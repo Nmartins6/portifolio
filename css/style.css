@@ -29,8 +29,8 @@
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-  
-  /* Reset global styles */
+
+/* Reset global styles */
 * {
     margin: 0;
     padding: 0;
@@ -113,6 +113,18 @@ ul {
     transition: all 0.5s ease;
     z-index: 999;
     overflow-y: auto;
+    transition: transform 0.3s ease;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#header::-webkit-scrollbar {
+    display: none;
+}
+
+body.menu-active {
+    overflow: hidden;
 }
 
 .profile {
@@ -463,7 +475,7 @@ ul {
 /* Section Journey */
 .resume-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--space-xl);
     margin-top: var(--space-xl);
 }
@@ -476,7 +488,13 @@ ul {
 }
 
 .resume-column-lg {
-    grid-template-columns: 2fr;
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.resume-column.volunteer {
+    order: -1;
+    margin-bottom: 3rem;
 }
 
 .resume-title {
@@ -582,22 +600,26 @@ ul {
     border-left: 1px solid var(--primary);
 }
 
-.responsibilities, .achievements {
+.responsibilities,
+.achievements {
     margin-top: 1rem;
 }
 
-.responsibilities h5, .achievements h5 {
+.responsibilities h5,
+.achievements h5 {
     font-size: 1rem;
     color: var(--dark);
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
-.responsibilities ul, .achievements ul {
+.responsibilities ul,
+.achievements ul {
     padding-left: 1.25rem;
 }
 
-.responsibilities li, .achievements li {
+.responsibilities li,
+.achievements li {
     margin-bottom: 0.5rem;
     position: relative;
     line-height: 1.5;
@@ -618,14 +640,14 @@ ul {
     background: white;
     border-radius: 8px;
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     border-left: 3px solid #3b82f6;
 }
 
 .certification-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .certification-header {
@@ -688,7 +710,7 @@ ul {
 }
 
 .project-content {
-    padding: var(--space-md);
+    padding: var(--space-xl);
 }
 
 .project-content h3 {
@@ -953,11 +975,57 @@ ul {
     .contact-info {
         grid-template-columns: 1fr 1fr;
     }
+
+    .project-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .certification-header {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 @media (min-width: 992px) {
     .skills-container {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .resume-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-column.volunteer {
+        order: 0;
+    }
+
+    .certification-item {
+        padding: 1rem;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .btn-view, .btn-code {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .resume-meta {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
 

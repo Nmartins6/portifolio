@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             disableOnInteraction: false,
         },
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 20,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -118,11 +118,12 @@ document.addEventListener('DOMContentLoaded', function() {
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-            768: {
+            576: {
                 slidesPerView: 2,
             },
             992: {
                 slidesPerView: 3,
+                spaceBetween: 30
             }
         }
     });
