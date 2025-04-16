@@ -938,8 +938,17 @@ ul {
         font-size: 2.5rem;
     }
 
-    .skills-grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    .resume-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -979,10 +988,19 @@ ul {
     .project-card {
         margin-bottom: 1.5rem;
     }
-    
+
     .certification-header {
         flex-direction: column;
         text-align: center;
+    }
+
+    .certifications-grid,
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .resume-item {
+        padding: 1rem;
     }
 }
 
@@ -1012,20 +1030,26 @@ ul {
     .section-title {
         font-size: 1.75rem;
     }
-    
-    .btn-view, .btn-code {
+
+    .btn-view,
+    .btn-code {
         width: 100%;
         text-align: center;
     }
-    
+
     .project-links {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .resume-meta {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .btn-view, .btn-code {
+        width: 100%;
+        text-align: center;
     }
 }
 
